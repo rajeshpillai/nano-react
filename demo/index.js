@@ -73,6 +73,28 @@ console.log(GreetingWithProps);
 TinyReact.render(<GreetingWithProps message="Good Day"/>, root);
 
 
+var GreetingWithNested = function (props) {
+  return (
+    <div className="greeting">
+      <h1 className="header">Functional Component</h1>
+      <h2>{props.message}</h2>
+      <div>{props.children}</div>
+    </div>
+  );
+};
+var Footer = function (props) {
+  return (
+    <h4>{props.children}</h4>
+  );
+}
+
+// STEP: 13 -> Nested functional Component
+
+TinyReact.render(
+  <GreetingWithNested message="Good Day!!">
+    <Footer>&copy; free to use</Footer>
+  </GreetingWithNested>,
+  root)
 
 
 
