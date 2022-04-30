@@ -57,6 +57,23 @@ console.log(Greeting);
 TinyReact.render(<Greeting />, root);
 
 
+var GreetingWithProps = function (props) {
+  return (
+    <div className="greeting">
+      <h1 className="header">Functional Component with Props</h1>
+      <h2>NOT CHANGED</h2>
+      <h3>{props.message}</h3>
+    </div>
+  );
+};
+
+console.log(GreetingWithProps);
+
+
+TinyReact.render(<GreetingWithProps message="Good Day"/>, root);
+
+
+
 
 
 
