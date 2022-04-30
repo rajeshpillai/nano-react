@@ -94,7 +94,16 @@ TinyReact.render(
   <GreetingWithNested message="Good Day!!">
     <Footer>&copy; free to use</Footer>
   </GreetingWithNested>,
-  root)
+root)
+
+
+setTimeout(function () {
+  alert("Re-rendering in 3 seconds!!");
+  TinyReact.render(
+    <GreetingWithNested message="Greeeting Voila! Changed!!" />,
+     root
+  );
+}, 3000);
 
 
 
