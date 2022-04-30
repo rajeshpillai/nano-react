@@ -38,3 +38,26 @@ setTimeout(() => {
 }, 3000);
 
 TinyReact.render(Step1, root);
+
+
+// Render function
+// Step 10: Rendering functional Components
+var Greeting = function (props) {
+  return (
+    <div className="greeting">
+      <h1 className="header">Functional Component</h1>
+      <h2>NOT CHANGED</h2>
+    </div>
+  );
+};
+
+console.log(Greeting);
+
+
+TinyReact.render(<Greeting />, root);
+
+
+
+
+
+
