@@ -32,12 +32,12 @@ const Step2 = (
   </div>
 );
 
-setTimeout(() => {
-  alert("Re-rendering...");
-  TinyReact.render(Step2, root);
-}, 3000);
+// setTimeout(() => {
+//   alert("Re-rendering...");
+//   TinyReact.render(Step2, root);
+// }, 3000);
 
-TinyReact.render(Step1, root);
+// TinyReact.render(Step1, root);
 
 
 // Render function
@@ -54,7 +54,7 @@ var Greeting = function (props) {
 console.log(Greeting);
 
 
-TinyReact.render(<Greeting />, root);
+// TinyReact.render(<Greeting />, root);
 
 
 var GreetingWithProps = function (props) {
@@ -70,7 +70,7 @@ var GreetingWithProps = function (props) {
 console.log(GreetingWithProps);
 
 
-TinyReact.render(<GreetingWithProps message="Good Day"/>, root);
+// TinyReact.render(<GreetingWithProps message="Good Day"/>, root);
 
 
 var GreetingWithNested = function (props) {
@@ -90,20 +90,34 @@ var Footer = function (props) {
 
 // STEP: 13 -> Nested functional Component
 
-TinyReact.render(
-  <GreetingWithNested message="Good Day!!">
-    <Footer>&copy; free to use</Footer>
-  </GreetingWithNested>,
-root)
+// TinyReact.render(
+//   <GreetingWithNested message="Good Day!!">
+//     <Footer>&copy; free to use</Footer>
+//   </GreetingWithNested>,
+// root)
 
+
+// setTimeout(function () {
+//   alert("Re-rendering in 3 seconds!!");
+//   TinyReact.render(
+//     <GreetingWithNested message="Greeeting Voila! Changed!!" />,
+//      root
+//   );
+// }, 3000);
+
+TinyReact.render(
+  <GreetingWithNested message="Greeeting Voila! Changed!!" />,
+   root
+);
 
 setTimeout(function () {
-  alert("Re-rendering in 3 seconds!!");
+  alert("Re-rendering in 5 seconds!!");
   TinyReact.render(
-    <GreetingWithNested message="Greeeting Voila! Changed!!" />,
+    <GreetingWithNested message="Greeeting, changed.  Does it work??" />,
      root
   );
-}, 3000);
+}, 5000);
+
 
 
 
