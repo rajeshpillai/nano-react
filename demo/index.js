@@ -2,7 +2,7 @@
 
 const root = document.getElementById("root");
 
-var Step1 = (
+const Step1 = (
   <div>
     <h1 className="header">Hello Tiny React!</h1>
     <h2>(coding nirvana)</h2>
@@ -17,6 +17,24 @@ var Step1 = (
   </div>
 );
 
-console.log(Step1);
+TinyReact.render(Step1, root);
+
+const Step2 = (
+  <div>
+    <h1 className="header">Hello Tiny React!</h1>
+    <h2>(coding nirvana)</h2>
+    <div>nested 1<div>nested 1.1</div></div>
+    <h3>(OBSERVE: I said it!!)</h3>
+    {2 == 1 && <div>Render this if 2==1</div>}
+    {2 == 2 && <div>{2}</div>}
+    <span>This is a text</span>
+    <button onClick={() => alert("Hi!")}>Click me!</button>
+  </div>
+);
+
+setTimeout(() => {
+  alert("Re-rendering...");
+  TinyReact.render(Step2, root);
+}, 3000);
 
 TinyReact.render(Step1, root);
